@@ -1,5 +1,56 @@
+@use "generalSizes" as GeneralSizes
+@use "generalColors" as GeneralColors
+
+*:not(hr)
+    box-sizing: border-box
+    padding: 0
+    margin: 0
+    border: 0
+
+ul, ol
+    list-style: none
+
+a
+    text-decoration: none
+    color: GeneralColors.$mainText
+
 body
-    background-color: white
+    background-color: GeneralColors.$mainBackground
+    color: GeneralColors.$mainText
+
+#nav-bar
+    height: GeneralSizes.$navBarHeight
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 0rem 2rem
+    
+    background-color: GeneralColors.$navBackground
+
+    ul
+        display: flex
+        gap: 1rem
+    
+    form
+
+        input, button
+            padding: 0.3rem
+
+        input
+            border-top-left-radius: 1rem
+            border-bottom-left-radius: 1rem
+            padding-left: .6rem
+            min-width: 15rem
+        
+        input:focus
+            outline: none
+
+        button
+            border-top-right-radius: 1rem
+            border-bottom-right-radius: 1rem
+            border-left: 0.08rem solid black
+            padding-right: .6rem
+        
 
 
     
